@@ -43,5 +43,11 @@ while count < 5:
 
     count += 1
 
-for i in pontuacao:
-    print(i)
+# for (var j = 0; j <comprimento - i - 1; j ++) {
+#     if (matriz [j]> matriz [j + 1]) {
+#       array.swap (j, j + 1);
+#     }
+# }
+
+# for i in range(0,len(pontuacao)):
+#     for j in range(0,len(pontuacao) - i - 1):
