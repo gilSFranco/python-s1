@@ -2,9 +2,18 @@ import os
 
 os.system('cls')
 
+def bubbleSort(pontuacao):
+    for p in range(len(pontuacao)-1, 0, -1):
+        for i in range(p):
+            if pontuacao[i] < pontuacao[i+1]:
+                aux = pontuacao[i]
+                pontuacao[i] = pontuacao[i+1]
+                pontuacao[i+1] = aux
+
 pontuacao = []
 count = 1
 soma = 0
+contador = 0
 
 while count < 5:
     print(f"\n{'*' * 5} {'Quiz - Sobre The Last Of Us(TLOU)'} {'*' * 5}")
@@ -43,11 +52,11 @@ while count < 5:
 
     count += 1
 
-# for (var j = 0; j <comprimento - i - 1; j ++) {
-#     if (matriz [j]> matriz [j + 1]) {
-#       array.swap (j, j + 1);
-#     }
-# }
+bubbleSort(pontuacao)
 
-# for i in range(0,len(pontuacao)):
-#     for j in range(0,len(pontuacao) - i - 1):
+print("")
+print(f"{'*' * 4} {'Ranking dos vencedores'} {'*' * 4}")
+for i in pontuacao:
+    contador += 1
+    print(f"{contador}º lugar - Usuario {contador} ({i} pontos).")
+print(f"{'*' * 4} {'Ranking dos vencedores'} {'*' * 4}")
